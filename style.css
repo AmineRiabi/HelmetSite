@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+   --main-color:#3367cc;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    height: 100vh;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 576px) { 
+    .container{
+        width: 562px;
+    }
+ }
+/* Small */
+@media(min-width: 768px){
+    .container{
+        width: 750px;
+    }
+
+}
+/* Medium */
+@media(min-width: 992px){
+    .container{
+        width: 970px;
+    }
+
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+/* ------header------ */
+header > nav{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #f2f2f2;
+    display: flex;
+    z-index: 999;
+}
+header > nav > .container > div{
+    display: flex;
+    justify-content: space-between;
+}
+header > nav img{
+    width: 200px;
+    height: auto;
+}
+header > nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header > nav ul > li > a{
+    text-decoration: none;
+    font-size: 1rem;
+    color:black;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    position: relative;
+    outline: none;
+    padding: 2px 0;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+}
+header > nav ul > li > a:hover{
+    color: var(--main-color,#3367cc);
+}
+header > nav ul > li > a::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color,#3367cc);
+    transition: width 0.4s ease-out;
+    -webkit-transition: width 0.4s ease-out;
+    -moz-transition: width 0.4s ease-out;
+    -ms-transition: width 0.4s ease-out;
+    -o-transition: width 0.4s ease-out;
+}
+header > nav ul > li > a::after{
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color,#3367cc);
+    transition: width 0.4s ease-out;
+    -webkit-transition: width 0.4s ease-out;
+    -moz-transition: width 0.4s ease-out;
+    -ms-transition: width 0.4s ease-out;
+    -o-transition: width 0.4s ease-out;
+}
+header > nav ul > li a:hover::before,
+header > nav ul > li a:hover::after{
+    width: 50%;
+}
+.active{
+    color: var(--main-color,#3367cc) !important;
+}
+header > nav ul > li a.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color,#3367cc);
+    transition: width 0.4s ease-out;
+    -webkit-transition: width 0.4s ease-out;
+    -moz-transition: width 0.4s ease-out;
+    -ms-transition: width 0.4s ease-out;
+    -o-transition: width 0.4s ease-out;
+}
+header > .contentHeader{
+    height: calc(100% - 49.188px);
+    display: flex;
+    position: relative;
+}
+header > .contentHeader > .sectionLeft{
+    width: 50%;
+    background-color: var(--main-color,#3367cc);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header > .contentHeader > .sectionLeft > div{
+    width: 354px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+header > .contentHeader > .sectionLeft h1{
+    text-transform: capitalize;
+    font-size: 4.5rem;
+    word-wrap: break-word;
+}
+header > .contentHeader > .sectionLeft p{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    line-height: 2;
+    letter-spacing: 2px;
+    
+}
+header > .contentHeader > .sectionRight{
+    width: 50%;
+    background-color: #ffffff;
+    background-image: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),url(imgs/imageHeader.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: luminosity;
+}
+.contentHeader > img{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-43%,-50%);
+    -webkit-transform: translate(-43%,-50%);
+    -moz-transform: translate(-43%,-50%);
+    -ms-transform: translate(-43%,-50%);
+    -o-transform: translate(-43%,-50%);
+}
+/* ----category---- */
+main .products{
+padding: 57px 0;
+}
+main .products > .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+main .products > .cards > .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+main .products > .cards > .card > .boxImage{
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+    -webkit-transition: transform 0.15s ease-in-out;
+    -moz-transition: transform 0.15s ease-in-out;
+    -ms-transition: transform 0.15s ease-in-out;
+    -o-transition: transform 0.15s ease-in-out;
+}
+main .products > .cards > .card:nth-child(1) > .boxImage
+{
+    background-image: url(imgs/GT-AIR-II/gt-air2.png);
+}
+main .products > .cards > .card:nth-child(2) > .boxImage{
+    background-image: url(imgs/X-FOURTEEN/x-fourteen.png) ;
+}
+main .products > .cards > .card:nth-child(3) > .boxImage{
+     background-image: url(imgs/NEOTEC-II/neotec2.png);
+}
+main .products > .cards > .card:nth-child(4) .boxImage
+{
+    background-image: url("imgs/HORNET-ADV/HORNET-ADV.png");
+}
+main .products > .cards > .card > .boxImage:hover{
+    transform: translate3d(0,-10px,0) ;
+    -webkit-transform: translate3d(0,-10px,0) ;
+    -moz-transform: translate3d(0,-10px,0) ;
+    -ms-transform: translate3d(0,-10px,0) ;
+    -o-transform: translate3d(0,-10px,0) ;
+}
+main .products  .card > .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+
+}
+main .products  .info > .title{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+main .products  .info > .description{
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+main .products .info > .description + div{
+    display: flex;
+    align-items: center;
+    /* column-gap:6px; */
+}
+main .products .info div > .viewMoreBtn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight:700;
+    padding: 5px 6px;
+    cursor: pointer; 
+    position: relative;
+    flex-shrink: 0;
+  
+}
+main .products .info > div > .viewMoreBtn::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    height: 2px;
+    width: 80%;
+    background-color: var(--main-color,#3367cc);
+}
+main .products .info > div > .viewMoreBtn + span.iconViewMore{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-color,#3367cc);
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+main .products .info > div > .viewMoreBtn + .moins::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #ffffff;
+    top: 46%;
+    left: 4px;
+}
+main .products .info > div > .viewMoreBtn + .plus::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #ffffff;
+    top: 4px;
+    left: 46%;
+
+}
+main .products .info > .miniCards{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.hide{
+    top: -70px !important;
+}
+main .products .info > .miniCards > .card{
+    border: 2px solid transparent;
+    position: relative;
+    top: 0px;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -ms-transition: top 0.5s;
+    -o-transition: top 0.5s;
+}
+main .products .info > .miniCards  .boxImage{
+    width: 58.5px;
+    height: 58.5px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+main .products .info > .miniCards > .card:hover{
+    border-color: var(--main-color,#3367cc);
+}
+
+main .products .card:nth-child(1) > .info > .miniCards > .card:nth-child(1) > .boxImage{
+    background-image: url("imgs/GT-AIR-II/gt-air2-glorify_tc-2.png");
+}
+main .products .card:nth-child(1) >.info > .miniCards > .card:nth-child(2) > .boxImage{
+    background-image: url("imgs/GT-AIR-II/gt-air2-mm93-collection-road_tc-5-1.png");
+}main .products .card:nth-child(1) > .info > .miniCards > .card:nth-child(3) > .boxImage{
+    background-image: url("imgs/GT-AIR-II/gt-air2-notch_tc-5.png");
+}main .products .card:nth-child(1) > .info > .miniCards > .card:nth-child(4) > .boxImage{
+    background-image: url("imgs/GT-AIR-II/gt-air2-notch_tc-8.png");
+}
+
+
+main .products .card:nth-child(2) > .info > .miniCards > .card:nth-child(1) > .boxImage{
+    background-image: url("imgs/X-FOURTEEN/x-fourteen-kujaku_tc-5-1.png");
+}
+main .products .card:nth-child(2) >.info > .miniCards > .card:nth-child(2) > .boxImage{
+    background-image: url("imgs/X-FOURTEEN/x-fourteen-aerodyne_tc-9.png");
+}main .products .card:nth-child(2) > .info > .miniCards > .card:nth-child(3) > .boxImage{
+    background-image: url("imgs/X-FOURTEEN/x-fourteen-marquez6_tc-1-1.png");
+}main .products .card:nth-child(2) > .info > .miniCards > .card:nth-child(4) > .boxImage{
+    background-image: url("imgs/X-FOURTEEN/x-fourteen-aerodyne_tc-4.png");
+}
+
+
+main .products .card:nth-child(3) > .info > .miniCards > .card:nth-child(1) > .boxImage{
+    background-image: url("imgs/NEOTEC-II/neotec2-respect_tc-1.png");
+}
+main .products .card:nth-child(3) >.info > .miniCards > .card:nth-child(2) > .boxImage{
+    background-image: url("imgs/NEOTEC-II/neotec2-winsome_tc-6.png");
+}main .products .card:nth-child(3) > .info > .miniCards > .card:nth-child(3) > .boxImage{
+    background-image: url("imgs/NEOTEC-II/neotec2-respect_tc-10.png");
+}main .products .card:nth-child(3) > .info > .miniCards > .card:nth-child(4) > .boxImage{
+    background-image: url("imgs/NEOTEC-II/neotec2-mm93-collection-2-way_tc-5.png");
+}
+
+main .products .card:nth-child(4) > .info > .miniCards > .card:nth-child(1) > .boxImage{
+    background-image: url("imgs/HORNET-ADV/HORNET-ADV-SOVEREIGN_TC-1.png");
+}
+main .products .card:nth-child(4) >.info > .miniCards > .card:nth-child(2) > .boxImage{
+    background-image: url("imgs/HORNET-ADV/HORNET_MatteDeepGrey.png");
+}main .products .card:nth-child(4) > .info > .miniCards > .card:nth-child(3) > .boxImage{
+    background-image: url("imgs/HORNET-ADV/HORNET_Black.png");
+}main .products .card:nth-child(4) > .info > .miniCards > .card:nth-child(4) > .boxImage{
+    background-image: url("imgs/HORNET-ADV/HORNET_White.png");
+}
