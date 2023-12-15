@@ -389,3 +389,432 @@ main .products .card:nth-child(4) >.info > .miniCards > .card:nth-child(2) > .bo
 }main .products .card:nth-child(4) > .info > .miniCards > .card:nth-child(4) > .boxImage{
     background-image: url("imgs/HORNET-ADV/HORNET_White.png");
 }
+
+main > .HelmetProfile{
+    background-image: url(imgs/imageMotoProfil.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+main > .HelmetProfile .containerOfLayout{
+    display: flex;
+    column-gap: 30px;
+    padding: 70px 0;
+}
+main .containerOfLayout > .leftBox,
+main .containerOfLayout > .rightBox{
+    width: 50%;
+}
+main > .HelmetProfile .containerOfLayout > .rightBox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 100px 0;
+}
+main > .HelmetProfile .containerOfLayout > .rightBox > h2{
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.1;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    max-width: 440px;
+}
+main > .HelmetProfile .containerOfLayout > .rightBox > h5{
+    text-transform: uppercase;
+    font-size: 1rem;
+    max-width: 360px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--main-color,#3367cc);
+}
+main > .HelmetProfile .containerOfLayout > .rightBox > div p{
+    font-size: 1rem;
+    line-height: 1.6;
+    text-indent: 10px;
+    letter-spacing: 1px;
+    max-width: 470px;
+    word-wrap: break-word;
+}
+main > .HelmetProfile .containerOfLayout > .leftBox{
+    background-image: url(imgs/imageBoxleft.jpg);
+    background-position: center;
+    background-size: cover;
+}
+main > .boxOneInfo{
+    background-image: url(imgs/imageMotoProfilTwo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+}
+main > .boxOneInfo h1{
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 1.2rem 0;
+}
+main > .boxOneInfo h4{
+    text-transform: uppercase;
+    color: var(--main-color,#3367cc);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 1.2rem 0;
+}
+main > .boxOneInfo p{
+    color: #ffffff;
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-size: 1rem;
+    max-width: 600px;
+    letter-spacing: 1px;
+    margin: 1.2rem 0;
+}
+
+main > .boxOneInfo a,
+main > .boxTwoInfo a
+{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight:700;
+    padding: 5px 0;
+    cursor: pointer; 
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+}
+main > .boxOneInfo a::before,
+main > .boxTwoInfo a::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--main-color,#3367cc);
+}
+
+main > .boxTwoInfo .containerOfLayout{
+    display: flex;
+    column-gap: 30px;
+    padding: 70px 0;
+}
+main > .boxTwoInfo .leftBox {
+    padding: 100px 0;
+}
+main > .boxTwoInfo .leftBox > h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 1.2rem 0;
+    color: #000000;
+}
+main > .boxTwoInfo .leftBox > h4{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--main-color,#3367cc);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 1.2rem 0;
+    letter-spacing: 2px;
+}
+main > .boxTwoInfo .leftBox > p{
+    font-size: 1rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    margin: 1.2rem 0;
+}
+
+main > .boxTwoInfo .leftBox > a{
+    color: #000000 !important;
+}
+main > .boxTwoInfo .rightBox{
+    background-image: url(imgs/imageMotoProfilThree.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+main > .ourServices{
+    padding: 100px 0;
+    background-color: #f2f2f2;
+}
+main  >.ourServices div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+main > .ourServices div > h1{
+    text-transform: capitalize;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #000000;
+    position: relative;
+}
+main > .ourServices div > h1::before{
+    position: absolute;
+    content: "";
+    background-image: url(imgs/services.png);
+    width: 50px;
+    height: 50px;
+    right: -65px;
+    background-position: center;
+    background-size: cover;
+}
+
+main > .ourServices div > p{
+    max-width: 685px;
+    font-size: 1rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+}
+/* ----------Accessories Section---------- */
+main > .accessories{
+  background-image: url("imgs/imgAccessoriesBox.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  
+}
+main > .accessories h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+main > .accessories h3{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+main > .accessories .accessoriesBox{
+    width: 800px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    color: #ffffff;
+}
+main > .accessories .accessoriesBox > .imgBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ /* -----Accessories One-----*/
+main > .accessories .accessoriesBox > .imgBox:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 4;
+    justify-content: space-around;
+}
+main > .accessories .accessoriesBox > .imgBox:nth-child(1) > img:only-of-type{
+    width: 340px;
+}
+/* -----Accessories Two and Three and Four ----- */
+main > .accessories .accessoriesBox > .imgBox > img:not(.accessories .imgBox:nth-child(1) > img,.accessories .imgBox:nth-child(5) > img){
+    width: 194px;
+}
+main > .accessories .accessoriesBox > .imgBox:not(.accessories .imgBox:nth-child(1),.accessories .imgBox:nth-child(5)){
+    grid-row: span 2;
+    justify-content: space-around;
+}
+ /* -----Accessories Five----- */
+main > .accessories .accessoriesBox > .imgBox:nth-child(5){
+    grid-row: span 2;
+    justify-content: space-evenly;
+}
+main > .accessories .accessoriesBox > .imgBox:nth-child(5) > img:only-of-type{
+    width: 157px;
+}
+main > .contactSection{
+    padding: 100px 0;
+    background-color: #e3e3e3;
+}
+main > .contactSection h1{
+    text-transform: capitalize;
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+main > .contactSection  p{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 1px;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+main > .contactSection  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+main .contactSection  form > input:not(input[type = "Submit"]),
+main .contactSection form > textarea
+{
+    padding: 12px 13px;
+    background-color: #ffffff;
+    outline: none;
+    width: 400px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 0 25px rgba(1 1 1 / 15%);
+}
+main .contactSection  form > input:not(input[type = "Submit"])::placeholder{
+    text-transform: capitalize;
+}
+main .contactSection form > textarea::placeholder{
+    text-transform: capitalize;
+    font-size: 1rem;
+
+}
+main .contactSection form > input[ type = "Submit"]{
+    padding: 0.8rem 4.4rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--main-color,#3367cc);
+    background-image: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+main .contactSection form > input[ type = "Submit"]:hover{
+    background-image:linear-gradient(0deg, #3367cc 100%, rgba(2,126,251,1) 0%);
+
+}
+/* ------footer------ */
+footer{
+    background-color: #000000;
+}
+footer .contentFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+footer .contentFooter > img{
+    width: 100px;
+    padding: 10px 0;
+}
+footer .contentFooter > ul{
+    display: flex;
+    list-style: none;
+}
+footer .contentFooter > ul > li{
+    padding: 0.8rem 0.6rem;
+}
+footer .contentFooter > ul > li > a{
+    color: #5e5e5e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+footer .contentFooter > ul > li > a:hover{
+    color: var(--main-color,#3367cc);
+}
+
+footer .contentFooter span{
+    padding: 1.6rem;
+    color: #5e5e5e;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+}
+footer .contentFooter span a{
+    text-decoration: none;
+    color: var(--main-color,#3367cc);
+}
+main > .btnUp{
+    width: 50px;
+    height:50px;
+    background-image: url(imgs/btnUp.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    right: -60px;
+    bottom: 20px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    cursor: pointer;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+}
+.show{
+    right: 10px !important;
+} 
+@media (max-width: 767.98px) {
+    main > .accessories .accessoriesBox{
+        width: 562px !important;
+        height: 800px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(8,1fr);
+    }
+    main > .accessories .accessoriesBox > .imgBox:nth-child(1){
+        grid-row: span 3;
+        grid-column: span 2;
+    }
+    main > .accessories .accessoriesBox > .imgBox:nth-child(1) > img:only-of-type {
+        width:280px;
+    }
+
+ }
+ 
+ @media (max-width: 991.98px) { 
+    .contentHeader > img{
+        width: 390px !important;
+    }
+    header > .contentHeader > .sectionLeft h1{
+        font-size: 3.5rem !important;
+    }
+    header > .contentHeader > .sectionLeft p{
+        font-size: 0.98rem !important;
+    }
+    main > .accessories .accessoriesBox{
+        width: 600px;
+    }
+    main > .accessories h3{
+        font-size: 1.2rem;
+    }
+
+  }
+ @media (max-width: 1199.98px) { 
+    .contentHeader > img{
+        width: 400px;
+    }
+    header > .contentHeader > .sectionLeft h1{
+        font-size: 4.2rem;
+    }
+  }
