@@ -774,47 +774,200 @@ main > .btnUp{
 }
 .show{
     right: 10px !important;
-} 
-@media (max-width: 767.98px) {
+}
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    z-index: 999;
+}
+.loader::before{
+content: "";
+width: 85px;
+height: 85px;
+border: 7px solid #dddddd5c;
+border-top-color: var(--main-color,#3367cc);
+border-bottom-color: var(--main-color,#3367cc);
+border-radius: 50%;
+animation: loading 0.75s ease infinite;
+
+}
+.loader::after{
+content: "loading...";
+font-size: 1.1rem;
+font-weight: 600;
+text-transform: capitalize;
+letter-spacing: 1px;
+animation: opacity 0.75s ease infinite;
+
+}
+@keyframes loading {
+from{
+    transform: rotate(0deg);
+}
+to{
+    transform: rotate(360deg);
+}
+}
+@keyframes opacity{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0.5;
+    }
+}
+
+/* Extra small*/
+@media(max-width:575.98px){
+    .container{
+        width: 280px;
+    }
+    .contentHeader > img{
+        width: 200px;
+    }
+    header > .contentHeader > .sectionLeft > div{
+        width: 232px;
+    }
+    header > .contentHeader > .sectionLeft h1{
+        font-size: 2rem;
+    }
+    header > .contentHeader > .sectionLeft p{
+        font-size: 0.65rem;
+    }
+    header > .contentHeader > .sectionLeft img{
+        width: 100px;
+    }
+    header > nav ul{
+        gap: 1rem;
+    }
+    header > nav ul > li > a{
+        font-size: 0.80rem;
+    }
+    header > nav img {
+        width: 120px;
+    }
+    main > .accessories .accessoriesBox > .imgBox:nth-child(1) > img:only-of-type {
+        width:240px;
+    }
+    main > .accessories .accessoriesBox > .imgBox > img:not(.accessories .imgBox:nth-child(1) > img,.accessories .imgBox:nth-child(5) > img){
+        width: 140px;
+    }
+    main > .accessories .accessoriesBox > .imgBox:nth-child(5) > img:only-of-type{
+        width: 100px;
+    }
+    main > .accessories h3{
+        font-size: 1rem;
+    }
     main > .accessories .accessoriesBox{
-        width: 562px !important;
+        width: 260px;
         height: 800px;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(8,1fr);
     }
-    main > .accessories .accessoriesBox > .imgBox:nth-child(1){
-        grid-row: span 3;
-        grid-column: span 2;
+    main .contactSection form > input:not(input[type = "Submit"]), main .contactSection form > textarea {
+        width: 300px;
+    }
+}
+
+
+/* Small */
+  @media (min-width: 576px) { 
+    .container{
+        width: 559px;
+    }
+    .contentHeader > img{
+        width: 290px;
+    }
+    header > .contentHeader > .sectionLeft h1{
+        font-size: 2.5rem;
+    }
+    header > .contentHeader > .sectionLeft p{
+        font-size: 0.70rem;
+    }
+    header > .contentHeader > .sectionLeft img{
+        width: 120px;
     }
     main > .accessories .accessoriesBox > .imgBox:nth-child(1) > img:only-of-type {
         width:280px;
     }
-
- }
- 
- @media (max-width: 991.98px) { 
-    .contentHeader > img{
-        width: 390px !important;
+    main > .accessories .accessoriesBox > .imgBox > img:not(.accessories .imgBox:nth-child(1) > img,.accessories .imgBox:nth-child(5) > img){
+        width: 170px;
     }
-    header > .contentHeader > .sectionLeft h1{
-        font-size: 3.5rem !important;
+    main > .accessories .accessoriesBox > .imgBox:nth-child(5) > img:only-of-type{
+        width: 140px;
+    }
+    main > .accessories h3{
+        font-size: 1rem;
+    }
+    main > .accessories .accessoriesBox{
+        width: 530px;
+        height: 800px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(8,1fr);
+    }
+    
+ }
+ /* Medium */
+@media(min-width: 768px){
+    .container{
+        width: 750px;
+    }
+    .contentHeader > img{
+        width: 380px;
+        
+     }
+     header > .contentHeader > .sectionLeft h1{
+        font-size: 3rem;
     }
     header > .contentHeader > .sectionLeft p{
-        font-size: 0.98rem !important;
+        font-size: 0.97rem;
     }
     main > .accessories .accessoriesBox{
         width: 600px;
+        height: 500px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
     }
     main > .accessories h3{
         font-size: 1.2rem;
     }
 
-  }
- @media (max-width: 1199.98px) { 
+}
+/* Large */
+@media(min-width: 992px){
+    .container{
+        width: 970px;
+    }
     .contentHeader > img{
         width: 400px;
+     }
+     header > .contentHeader > .sectionLeft h1{
+         font-size: 4.2rem;
+     }
+     main > .accessories .accessoriesBox{
+        width: 800px;
     }
-    header > .contentHeader > .sectionLeft h1{
-        font-size: 4.2rem;
+
+}
+/* Extra large */
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
     }
-  }
+    .contentHeader > img{
+        width: 500px;
+     }
+     header > .contentHeader > .sectionLeft h1{
+        font-size: 4.5rem;
+    }
+}

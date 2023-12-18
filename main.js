@@ -107,3 +107,8 @@ btnUp.onclick = function(){
     })
 }
 
+// loader
+window.addEventListener("load",function(){
+    document.querySelector(".loader").remove();
+
+});
