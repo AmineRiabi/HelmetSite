@@ -830,7 +830,7 @@ to{
 /* Extra small*/
 @media(max-width:575.98px){
     .container{
-        width: 280px;
+        width: 380px;
     }
     .contentHeader > img{
         width: 200px;
@@ -877,6 +877,15 @@ to{
     main .contactSection form > input:not(input[type = "Submit"]), main .contactSection form > textarea {
         width: 300px;
     }
+    main > .ourServices div > h1 {
+        font-size: 2rem;
+    }
+    main > .boxTwoInfo .leftBox > h1 {
+        font-size: 2.2rem;
+    }
+    main > .accessories h1{
+        font-size: 2.5rem;
+    }
 }
 
 
@@ -914,6 +923,15 @@ to{
         height: 800px;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(8,1fr);
+    }
+    main > .ourServices div > h1 {
+        font-size: 3rem;
+    }
+    main > .boxTwoInfo .leftBox > h1 {
+        font-size: 3rem;
+    }
+    main > .accessories h1{
+        font-size: 3rem;
     }
     
  }
